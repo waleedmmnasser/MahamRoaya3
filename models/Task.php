@@ -2,7 +2,7 @@
 
 class Task
 {
-    private $id, $empId, $sharedWithIds, $assignDate, $assignTime, $dueDate, $dueTime, $description;
+    private $id, $empId, $sharedWithIds, $priority, $assignDate, $assignTime, $dueDate, $dueTime, $description;
     private $attachments, $progress, $notes;
 
     function __construct()
@@ -66,6 +66,26 @@ class Task
     public function setSharedWithIds($strSharedWithIds)
     {
         $this->sharedWithIds = explode(',', $strSharedWithIds);
+
+        return $this;
+    }
+
+    /**
+     * Get the value of priority
+     */ 
+    public function getPriority()
+    {
+        return $this->priority;
+    }
+
+    /**
+     * Set the value of priority
+     *
+     * @return  self
+     */ 
+    public function setPriority($priority)
+    {
+        $this->priority = $priority;
 
         return $this;
     }

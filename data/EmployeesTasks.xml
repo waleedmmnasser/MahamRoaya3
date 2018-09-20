@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EmployeesTasks>
     <EmployeeTasks empId="7">
-        <Task id="7.1" assignedOn="2018-9-2" assignedAt="" dueDate="2018-9-20" dueTime="11:00" finishedOn="" finishedAt="">
+        <Task id="7.1" priority="2" assignedOn="2018-9-2" assignedAt="" dueDate="2018-9-20" dueTime="11:00" finishedOn="" finishedAt="">
             <Description>التواصل مع المدقق</Description>
             <SharedWith otherEmps="8,9"/>
             <Attachments>
@@ -15,7 +15,7 @@
             </Progress>
             <Evaluation/>
         </Task>
-        <Task id="7.2" assignedOn="2018-9-3" assignedAt="" dueDate="2018-9-10" dueTime="16:00" finishedOn="" finishedAt="">
+        <Task id="7.2" priority="1" assignedOn="2018-9-3" assignedAt="" dueDate="2018-9-10" dueTime="16:00" finishedOn="" finishedAt="">
             <Description>حصر المعدات الإلكترونية</Description>
             <Attachments>
                 <Attachment path=""/>
@@ -28,7 +28,7 @@
             </Progress>
             <Evaluation/>
         </Task>
-        <Task id="7.3" assignedOn="2018-9-5" assignedAt="" dueDate="2018-10-12" dueTime="13:30" finishedOn="" finishedAt="">
+        <Task id="7.3" priority="3" assignedOn="2018-9-5" assignedAt="" dueDate="2018-10-12" dueTime="13:30" finishedOn="" finishedAt="">
             <Description>تعديل كود برنامج إدارةالمهام</Description>
             <Attachments>
                 <Attachment path=""/>
@@ -43,37 +43,37 @@
         </Task>
     </EmployeeTasks>
     <EmployeeTasks empId="8">
-        <Task id="8.1" assignedOn="2018-9-14" assignedAt="13:50:56" dueDate="2018-09-22" dueTime="02:50">
+        <Task id="8.1" priority="3" assignedOn="2018-9-14" assignedAt="13:50:56" dueDate="2018-09-22" dueTime="02:50">
             <Description>نتاناتانا نتانا نتاتا </Description>
             <AssigneeNotes/>
             <Progress val="0"/>
         </Task>
-        <Task id="8.2" assignedOn="2018-9-14" assignedAt="14:09:59" dueDate="2018-10-07" dueTime="16:13">
+        <Task id="8.2" priority="2" assignedOn="2018-9-14" assignedAt="14:09:59" dueDate="2018-10-07" dueTime="16:13">
             <Description>هعغعغ فغقغفق فغقغفق غفقفق</Description>
             <AssigneeNotes/>
             <Progress val="0"/>
         </Task>
-        <Task id="8.3" assignedOn="2018-9-14" assignedAt="14:54:55" dueDate="2018-10-17" dueTime="16:58">
+        <Task id="8.3" priority="1" assignedOn="2018-9-14" assignedAt="14:54:55" dueDate="2018-10-17" dueTime="16:58">
             <Description>mmmmmmmmmmmmm</Description>
             <AssigneeNotes/>
             <Progress val="0"/>
         </Task>
-        <Task id="8.4" assignedOn="2018-9-14" assignedAt="14:57:47" dueDate="2018-10-10" dueTime="09:55">
+        <Task id="8.4" priority="2" assignedOn="2018-9-14" assignedAt="14:57:47" dueDate="2018-10-10" dueTime="09:55">
             <Description>dlaskjdlaskdjsalkdjdsajsakjd</Description>
             <AssigneeNotes/>
             <Progress val="0"/>
         </Task>
     </EmployeeTasks>
     <EmployeeTasks empId="9">
-        <Task id="9.1" assignedOn="2018-9-14" assignedAt="14:58:54" dueDate="2018-10-16" dueTime="08:53">
+        <Task id="9.1" priority="1" assignedOn="2018-9-14" assignedAt="14:58:54" dueDate="2018-10-16" dueTime="08:53">
             <Description>riutyreiy iueytwiuery iuweytriweuyr</Description>
             <AssigneeNotes/>
             <Progress val="0"/>
         </Task>
-        <Task id="9.2" assignedOn="2018-9-14" assignedAt="15:00:28" dueDate="2018-10-11" dueTime="12:56">
+        <Task id="9.2" priority="2" assignedOn="2018-9-14" assignedAt="15:00:28" dueDate="2018-10-11" dueTime="12:56">
             <Description>weiuryweir wqiwqeyiuey shafdhasfd</Description>
             <AssigneeNotes/>
             <Progress val="0"/>
         </Task>
     </EmployeeTasks>
-<EmployeeTasks empId="undefined"><Task id="undefined.1" assignedOn="2018-9-18" assignedAt="17:01:20" dueDate="" dueTime=""><Description/><AssigneeNotes/><Progress val="0"/></Task></EmployeeTasks></EmployeesTasks>
+</EmployeesTasks>

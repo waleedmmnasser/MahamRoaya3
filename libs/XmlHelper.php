@@ -280,6 +280,7 @@ class XmlHelper
             $newId = $idPart + 1;
             $newTaskElm = self::$tasksDoc->createElement('Task');
             $newTaskElm->setAttribute('id', $empId . '.' . $newId);
+            $newTaskElm->setAttribute('priority', $newTask->getPriority());
             $newTaskElm->setAttribute('assignedOn', date('Y-n-j'));
             $newTaskElm->setAttribute('assignedAt', date('G:i:s'));
             $newTaskElm->setAttribute('dueDate', $newTask->getDueDate());
@@ -370,6 +371,7 @@ class XmlHelper
             $newId = $idPart + 1;
             $newTaskElm = self::$tasksDoc->createElement('Task');
             $newTaskElm->setAttribute('id', $empId . '.' . $newId);
+            $newTaskElm->setAttribute('priority', $newTask->getPriority());
             $newTaskElm->setAttribute('assignedOn', date('Y-n-j'));
             $newTaskElm->setAttribute('assignedAt', date('G:i:s'));
             $newTaskElm->setAttribute('dueDate', $newTask->getDueDate());
@@ -468,7 +470,7 @@ class XmlHelper
 
                 //echo "<br> Found: " . $theTasksElms->length;
 
-                $empTasks = array();
+                $empTasks = array(); $taskPriorities = array();
 
                 foreach($theTasksElms as $taskElm)
                 {
@@ -511,21 +513,7 @@ class XmlHelper
                 $empTasks = array();
 
                 foreach($theTasksElms as $taskElm)
-                {
-                    /*
-                    $taskPrgElm = self::getXmlElm($taskElm, "Progress");
-                    $taskPrg = $taskPrgElm->getAttribute("val");
-
-                    $aTask = new Task;
-
-                    $aTask->setId($taskElm->getAttribute("id"));
-                    $aTask->setAssignDate($taskElm->getAttribute("assignedOn"));
-                    $aTask->setDueDate($taskElm->getAttribute("dueDate"));
-                    $aTask->setDescription(self::getXmlElmVal($taskElm, "Description"));
-                    $aTask->setProgress($taskPrg);
-                    */
                     $empTasks[] = self::createTask($taskElm);
-                }
 
                 //echo "<br>From XmlHelper: " . count($empTasks);
                 //var_dump($empTasks);
@@ -605,6 +593,7 @@ class XmlHelper
             $aTask = new Task;
 
             $aTask->setId($taskElm->getAttribute("id"));
+            $aTask->setPriority($taskElm->getAttribute("priority"));
             $aTask->setAssignDate($taskElm->getAttribute("assignedOn"));
             $aTask->setDueDate($taskElm->getAttribute("dueDate"));
             $aTask->setDueTime($taskElm->getAttribute("dueTime"));

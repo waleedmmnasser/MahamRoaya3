@@ -21,22 +21,7 @@ class Tasks extends Controller
             $ownTasksHtml = "";
 
             foreach($ownTasks as $aTask)
-            {
-                /*
-                $taskId = $aTask->getId();
-                $prgrsEdtr = "<input id='prgr" . $taskId . "' type='text' maxlength='3' size='3' value='" 
-                            . $aTask->getProgress() . "' />";
-                $notesEdtr = "<input id='note" . $taskId . "' type='text' maxlength='100' size='50' value='" 
-                            . $aTask->getNotes() . "' />";
-                $ownTasksHtml .= "<tr><td>" . $aTask->getDescription() . "</td>" .
-                            "<td>" . $aTask->getAssignDate() . "</td>" .
-                            "<td>" . $aTask->getDueDate() . "</td>" .
-                            "<td style='width:30px'>" . $prgrsEdtr . "</td>" .
-                            "<td style='width:80px'>" . $notesEdtr . "</td>" .
-                            "</tr>";
-                */
                 $ownTasksHtml .= $this->createTaskRow($aTask, true);
-            }
         }
 
         $this->view->empCrntTasks = $ownTasksHtml;
@@ -121,24 +106,7 @@ class Tasks extends Controller
             $theTasks = "";
 
             foreach($empTasks as $emTk)
-            {
-                /*
-                $taskId = $emTk->getId();
-                $prgrsEdtr = "<input id='prgr" . $taskId . "' type='text' maxlength='3' value='" 
-                            . $emTk->getProgress() . "' />";
-                $notesEdtr = "<input id='note" . $taskId . "' type='text' maxlength='100' value='" 
-                            . $emTk->getNotes() . "' />";
-                $theTasks .= "<tr><td>" . $emTk->getDescription() . "</td>" .
-                            "<td>" . $emTk->getAssignDate() . "</td>" .
-                            "<td>" . $emTk->getDueDate() . "</td>" .
-                            "<td>" . $prgrsEdtr . "</td>" .
-                            "<td>" . $notesEdtr . "</td>" .
-                            "<td><input id='delayTask'" . $taskId . "' type='button' /></td>" .
-                            "<td><input id='delTask'" . $taskId . "' type='button' /></td>" .
-                            "</tr>";
-                */
                 $theTasks .= $this->createTaskRow($emTk, false);
-            }
             
             echo $theTasks;
         }
@@ -152,6 +120,7 @@ class Tasks extends Controller
         $notesEdtr = "<input id='note" . $taskId . "' type='text' maxlength='150' value='" 
                     . $aTask->getNotes() . "' />";
         $taskRow = "<tr><td>" . $aTask->getDescription() . "</td>" .
+                    "<td>" . $aTask->getPriority() . "</td>" .
                     "<td>" . $aTask->getAssignDate() . "</td>" .
                     "<td>" . $aTask->getDueDate() . " - " . $aTask->getDueTime() . "</td>" .
                     "<td>" . $prgrsEdtr . "</td>" .

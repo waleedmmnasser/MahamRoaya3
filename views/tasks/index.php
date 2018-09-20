@@ -21,6 +21,7 @@
             <thead>
                 <tr>
                     <th>وصف المهمة</th>
+                    <th>الأولوية</th>
                     <th>تاريخ التكليف</th>
                     <th>موعد التسليم</th>
                     <th style="width:30px">نسبة الإنجاز</th>
@@ -54,6 +55,7 @@
         <thead>
         <tr>
             <th>وصف المهمة</th>
+            <th>الأولوية</th>
             <th>تاريخ التكليف</th>
             <th>موعد التسليم</th>
             <th>نسبة الإنجاز</th>
@@ -73,6 +75,14 @@
             <form id="newTaskForm" class="w3-container">
                 <label style="font-weight:bold">الوصف</label><input class="w3-input" id="taskDesc" type="text" name="taskDesc" /><br>
                 <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:5%">
+                        <label style="font-weight:bold">الأولوية</label>
+                        <select class="w3-select" id="taskPriority" name="taskPriority">
+                        </select>
+                    </div>
+                    <div class="w3-cell">
+                        <label><label>
+                    </div>
                     <div class="w3-cell">
                         <label style="font-weight:bold">ساعة التسليم</label><input class="w3-input" id="taskDueTime" type="time" name="taskDueTime" />
                     </div>
