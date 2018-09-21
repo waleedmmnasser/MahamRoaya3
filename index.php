@@ -21,6 +21,8 @@ spl_autoload_register('classAutoLoader');
 
 XmlHelper::loadData();
 
+echo "Data loaded";
+
 //Auth::handleLogin();
 // Load the Bootstrap!
 $bootstrap = new Bootstrap();

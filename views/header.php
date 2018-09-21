@@ -35,10 +35,16 @@
         <a href="<?php echo URL; ?>user">Users</a>
         <?php endif; ?>
         
-        <label style="font-size:20px; color:yellow">
-            <?php echo $_SESSION['CurrentEmp']->getFullName(); ?>
-        </Label>
-        <a href="<?php echo URL; ?>dashboard/logout">اخرج</a>    
+        <div class="w3-cell-row">
+            <div class="w3-cell">
+                <label style="font-size:20px; color:yellow">
+                    <?php echo $_SESSION['CurrentEmp']->getFullName(); ?>
+                </Label>
+            </div>
+            <div class="w3-cell">
+                <a href="<?php echo URL; ?>dashboard/logout">اخرج</a>    
+            </div>
+        </div>
     <?php else: ?>
         <a href="<?php echo URL; ?>login">دخول</a>
     <?php endif; ?>
