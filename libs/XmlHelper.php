@@ -69,6 +69,8 @@ class XmlHelper
     {
         try
         {
+            echo "<br>Into authorizeUser... " . $userName;
+
             //TODO: Add password check
             $empsElms = self::$empsPath->query("//Employees/Employee[@userName='" . $userName . "']");
 

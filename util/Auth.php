@@ -9,6 +9,8 @@ class Auth
     {
         try
         {
+            echo "<br>Checking login...";
+            
             @session_start();
 
             //if (isset($_SESSION['loggedIn']))
@@ -22,7 +24,7 @@ class Auth
                 if ($logged == false && !$isCheckingLogin) {
                     session_destroy();
 
-                    //echo "Must login first: " . URL;
+                    echo "<br>Must login first: " . URL;
                     require './controllers/login.php';
                     $loginContrl = new Login; $loginContrl->index();
 

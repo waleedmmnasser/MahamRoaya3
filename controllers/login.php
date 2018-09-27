@@ -19,7 +19,7 @@ class Login extends Controller {
     {
         //echo "<br>Received: " . $fromForm . "<br>";
         //$this->model->run();
-        //echo "<br>Into login.run: " . $_POST["login"] . " / " . $_POST["password"];
+        echo "<br>Into login.run: " . $_POST["login"] . " / " . $_POST["password"];
         $authUser = XmlHelper::authorizeUser($_POST["loginName"], $_POST["password"]);
         
         //if (strcmp($_POST["password"], "AbcXyz123") == 0)
@@ -32,7 +32,8 @@ class Login extends Controller {
             //$_SESSION['CurrentEmp']
             $this->view->crntEmpName = $authUser->getFullName();
             
-            $this->view->gotoPage('tasks');
+            //$this->view->gotoPage('tasks');
+            $this->view->doPostRequest('tasks');
         }
         else
             echo "خطأ في بيانات الدخول";

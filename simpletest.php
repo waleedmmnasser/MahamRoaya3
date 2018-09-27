@@ -18,10 +18,10 @@ spl_autoload_register('classAutoLoader');
 
 XmlHelper::loadData();
 
-echo "<br>Data loaded " . date("j-n-Y G:i:s");
+//echo "<br>Data loaded " . date("j-n-Y G:i:s");
 
 $bootstrap = new Bootstrap();
 
 $bootstrap->init();
 
-echo "<br>Bootstrap initiated " . date("j-n-Y G:i:s");
+//echo "<br>Bootstrap initiated " . date("j-n-Y G:i:s");

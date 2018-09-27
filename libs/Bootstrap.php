@@ -17,11 +17,16 @@ class Bootstrap {
      */
     public function init()
     {
-        //echo '<br>Into BS.init<br>';
+        echo '<br>Into BS.init ' . date('G:i:s') . '<br>';
         // Sets the protected $_url
+
+        echo "<br> [" . date('G:i:s') . "] Url: " . $_GET['url'];
+
+        echo "<br>Before [" . date('G:i:s') . "]From getUrl: " . $_POST["ctrlr"] . "/" . $_POST["mtd"];
+
         $this->_getUrl();
 
-        //echo "<br>" . $_GET['url'] . "<br>";
+        //echo "<br>URL: " . $_GET['url'] . "<br>";
         Auth::handleLogin();
 
         // Load the default controller if no URL is set
@@ -81,10 +86,13 @@ class Bootstrap {
      */
     private function _getUrl()
     {
+        echo "<br>[" . date('G:i:s') . "]From getURl: " . $_POST["ctrlr"] . "/" . $_POST["mtd"];
+        
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
         $url = filter_var($url, FILTER_SANITIZE_URL);
         $this->_url = explode('/', $url);
+        
     }
     
     /**
@@ -106,8 +114,10 @@ class Bootstrap {
     {
         try
         {
+            $this->_url[0] = $_POST["ctrlr"];
+
             //echo '<br>Into loadExistingController<br>';
-            //echo '<br>Ctrl path: ' . $this->_controllerPath . $this->_url[0] . '<br>';
+            echo '<br>Ctrl path: ' . $this->_controllerPath . $this->_url[0] . '<br>';
 
             $file = $this->_controllerPath . $this->_url[0] . '.php';
             
